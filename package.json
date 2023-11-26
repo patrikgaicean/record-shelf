@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/patrikgaicean/record-shelf/issues"
   },
-  "homepage": "https://github.com/patrikgaicean/record-shelf#readme"
+  "homepage": "https://github.com/patrikgaicean/record-shelf#readme",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
 }
