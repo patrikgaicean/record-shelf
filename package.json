@@ -1,0 +1,19 @@
+{
+  "name": "record-shelf",
+  "version": "1.0.0",
+  "description": "vinyl records library",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/patrikgaicean/record-shelf.git"
+  },
+  "author": "Patrik Gaicean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrikgaicean/record-shelf/issues"
+  },
+  "homepage": "https://github.com/patrikgaicean/record-shelf#readme"
+}
