@@ -1,16 +1,7 @@
-import fs from "node:fs";
-import https from "node:https";
+import { server } from "./server.js";
 
-const options = {
-    key: fs.readFileSync(process.env.SSL_KEY_PATH),
-    cert: fs.readFileSync(process.env.SSL_CERT_PATH),
-};
+const PORT = 8000;
 
-https
-    .createServer(options, (req, res) => {
-        res.writeHead(200);
-        res.end("hello world\n");
-    })
-    .listen(8000, () => {
-        console.log("server started on https://localhost:8000");
-    });
+server.listen(PORT, () => {
+    console.log(`Server running at https://localhost:${PORT}/`);
+});
