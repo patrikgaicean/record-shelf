@@ -1,10 +1,12 @@
-import { routeUsers } from "./users.js";
 import { routeRecords } from "./records.js";
-import { extractUrl } from "../common/common.js";
+import { extractUrl, extractUrlParts } from "../common/url.js";
+import { sendNotFound } from "./responses.js";
+import { routeUsers } from "./users.js";
 
 export function route(req, res) {
     const url = extractUrl(req);
-    const baseRoute = "/" + url.pathname.split("/")[1];
+    const { baseRoute } = extractUrlParts(url);
+    console.log(`${req.method} - ${url.href}`);
 
     switch (baseRoute) {
         case "/users":
@@ -18,9 +20,4 @@ export function route(req, res) {
         default:
             sendNotFound(res);
     }
-}
-
-function sendNotFound(res) {
-    res.writeHead(404);
-    res.end("Not Found");
 }
