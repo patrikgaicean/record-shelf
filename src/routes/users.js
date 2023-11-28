@@ -7,13 +7,13 @@ export function routeUsers(req, res) {
     const { parts } = extractUrlParts(url);
     const id = parts[0];
 
-    if (req.method === HTTP_METHODS.GET && !id) {
-        // handleGetUser(req, res, id);
+    if (req.method === HTTP_METHODS.POST && !id) {
+        // handleCreateUser(req, res);
         return sendOk(res);
     }
 
-    if (req.method === HTTP_METHODS.POST && !id) {
-        // handleCreateUser(req, res);
+    if (req.method === HTTP_METHODS.GET && id) {
+        // handleGetUser(req, res, id);
         return sendOk(res);
     }
 
